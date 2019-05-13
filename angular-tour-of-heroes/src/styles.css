@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url(../src/fundo.jpg);
+    background-repeat:inherit;
+    background-position-x: 50%;
+    width: 1000;
+    height: 680px;
+}

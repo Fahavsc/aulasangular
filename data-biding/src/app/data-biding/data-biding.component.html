@@ -1,0 +1,15 @@
+<section class="property-biding">
+  <article>
+    <h3>Interpolação / Interpolation</h3>
+    <p>{{ url }}</p>
+    <p>Resultado de 1 + 1 é: {{1+1}}</p>
+    <p>Resultado de 1 + 1 não é: {{1+1+getValor()}}</p>
+    <p>Curtiu o curso de angular?: {{ isCursoAngular() && curtirCurso()}}</p>
+  </article>
+
+  <article>
+    <h3>Data-biding</h3>
+    <img src="{{ urlImagem }}">
+    <img [src]="urlImagem">
+  </article>
+</section>
