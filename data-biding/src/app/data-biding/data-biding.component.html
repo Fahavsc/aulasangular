@@ -1,4 +1,4 @@
-<section class="property-biding">
+<!-- <section class="property-biding"> -->
   <!-- <article>
     <h3>Interpolação / Interpolation</h3>
     <p>{{ url }}</p>
@@ -13,7 +13,7 @@
     <img [src]="urlImagem">
   </article> -->
 
-  <article>
+  <!-- <article>
     <h3>Class e Style Biding</h3>
     <div>Selecione uma classe:
       <select #classe (change)="0">
@@ -54,4 +54,37 @@
 
     </div>
   </article>
+</section> -->
+
+
+
+<section class="event-biding">
+
+  <article>
+    <h3>Event Biding</h3>
+    <br><br>
+    <div>
+
+      
+        <tr><input type="text" placeholder="Digite seu nome"
+          (keyup) ="onKeyUp($event)"
+          (keyup.enter) = "setValor($event.target.value)"
+          (blur) = "setValor(campoInput.value)"
+          #campoInput /></tr>
+        <br>
+        <tr><button class="btn btn-primary" (click)="botaoClicado()"> Clique</button></tr>
+        <br><br>
+
+        <tr><span>Nome:</span> {{ valor }}</tr>
+        <br>
+
+        <span (mouseover) = "onMouseOverOut()"
+              (mouseoff) = "onMouseOverOut()"
+              [class.highlight] = "isMouseOver">
+          Passe o mouse sobre mim
+        
+        </span>
+    </div>
+  </article>
+  
 </section>
