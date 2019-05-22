@@ -1,0 +1,55 @@
+<section class="two-way-biding">
+  <article>
+    <h3>Two-way Data Biding</h3>
+    <br>
+    <div>
+      <input type="text"
+        [value]="nome"
+        (input)="nome = $event.target.value"
+      />
+
+      <br>
+
+      <input type="text"
+        [ngModel]="nome"
+        (ngModelChange)="nome = $event"
+      />
+
+      <input type="text" [(ngModel)]="nome" placeholder="Two-way">
+
+        <br> 
+      <p>Voce digitou:<span> {{ nome }} </span></p>
+    </div>
+
+    <div>
+      <tr>
+        <input type="text" 
+        [(ngModel)]="pessoa.nome" 
+        id="nome" 
+        placeholder="Insira o Nome"/>
+      </tr>
+
+      <br>
+
+      <tr>
+        <input type="number" 
+        [(ngModel)]="pessoa.idade" 
+        id="idade" 
+        placeholder="Insira a Idade"/>
+      </tr>
+      <br><br>
+      <tr>
+        <input type="text" 
+        [(ngModel)]= "pessoa.corCabelo"
+        id="tfcorCabelo"
+        placeholder="Insira a Cor do cabelo"/>
+      </tr>
+      <br><br>
+
+      <tr><h2>Ola meu nome é {{ pessoa.nome | uppercase }} e eu tenho {{ pessoa.idade }} anos de Idade e tenho cabelo {{ pessoa.corCabelo }} e 
+        sou uma anã
+      </h2></tr><br>
+      <tr>Idade: <span>{{ pessoa.idade }} Anos</span></tr>
+    </div>
+  </article>
+</section>

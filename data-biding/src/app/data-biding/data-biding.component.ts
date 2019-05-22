@@ -10,9 +10,10 @@ export class DataBidingComponent implements OnInit {
   url:string = 'http://fabricio.com';
   cursoAngular:boolean = true;
   urlImagem:string = 'http://lorempixel.com/400/200/nature/';
-  mensagem: string;
   valor : string = '';
   isMouseOver : boolean = false;
+  
+
   constructor() { }
 
   ngOnInit() {
